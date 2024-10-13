@@ -1,0 +1,179 @@
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-image: url("../imagens/background.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+
+    backdrop-filter: blur(3px);
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.interface{
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+
+
+.oni-card {
+    display: none;
+    max-width: 360px;
+    border-radius:  20px;
+    border: 5px solid black;
+    box-shadow: rgba(100, 100, 111, 0.2)
+    7px 29px 0px
+}
+
+.oni-card.aberto {
+    display: block;
+}
+
+.oni-card img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.oni-card .card-topo  {
+    padding: 30px 40px 0px;
+    display: block;
+
+}
+
+.oni-card .nome{
+    margin-bottom: 10px;
+
+}
+
+#card-murasakiimo .detalhes{
+   font-size: 14px;
+   gap: 10px;
+    
+}
+
+.oni-card .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.65;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.oni-card .detalhes{
+    color: rgba(255, 255, 255, 0.9); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.oni-card .card-info{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 20px;
+    margin-top: -70px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    
+}
+
+.oni-card .card-info h3{
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 5px solid;
+    border-radius: 30px;
+}
+
+.oni-card .card-info .descricao p{
+    padding: 0 10px;
+    font-family: Poppins;
+    font-size: 18px;
+    max-height: 125px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.tipo-psiquico{
+    background-color: #fcc ;
+}
+.tipo-fogo{
+    background-color: rgb(234, 105, 58) ;
+}
+.tipo-agua{
+    background-color: rgb(72, 186, 235) ;
+}
+.tipo-planta{
+    background-color: rgb(24, 187, 16) ;
+}
+.tipo-normal{
+    background-color: rgb(165, 161, 161) ;
+}
+.tipo-sombrio{
+    background-color: rgb(54, 53, 53) ;
+}
+
+.lista{
+    max-width: 200px;
+}
+
+.lista .oni img{
+    width: 25%;
+}
+
+.lista .oni {
+    background-color: azure;
+    color: black;
+    font-size: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin: 10px;
+    cursor: pointer;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border:  5px groove black;
+    min-height:  60px;
+
+    transition: 0.5 ease;
+}
+
+.lista .oni:hover {
+    transform: translate(15px);
+}
+
+.lista .oni span{
+    padding-right: 20px;
+}
+
+.lista .oni.ativo{
+    background-color: rgb(213, 173, 124);
+}
